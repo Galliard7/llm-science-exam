@@ -56,27 +56,14 @@ Tested direct inference with Xwin-LM-70B using RAG (layer-by-layer model loading
 ```
 
 
+
 ## Kaggle Notebooks
 
-Key notebooks published on Kaggle ([illidan7](https://www.kaggle.com/illidan7)):
+Published notebooks on Kaggle ([illidan7](https://www.kaggle.com/illidan7)):
 
 - [LLMSE - Study for the right exam!](https://www.kaggle.com/code/illidan7/llmse-study-for-the-right-exam) (21 upvotes)
 - [LLMSE - ContextEnsemble](https://www.kaggle.com/code/illidan7/llmse-contextensemble) (3 upvotes)
-- [LLMSE - EnsembleOpt](https://www.kaggle.com/code/illidan7/llmse-ensembleopt)
-- [LLMSE - HillClimb](https://www.kaggle.com/code/illidan7/llmse-hillclimb)
-- [LLMSE - Inference - Opt Weights](https://www.kaggle.com/code/illidan7/llmse-inference-opt-weights)
-- [LLMSE- Inference - Simple Weights](https://www.kaggle.com/code/illidan7/llmse-inference-simple-weights)
-- [LLMSE - MB270k - Ensemble - 849 - backup](https://www.kaggle.com/code/illidan7/llmse-mb270k-ensemble-849-backup)
-- [LLMSE - MB270k - Ensemble - r1](https://www.kaggle.com/code/illidan7/llmse-mb270k-ensemble-r1)
-- [LLMSE - MB270k - Ensemble- Refactor](https://www.kaggle.com/code/illidan7/llmse-mb270k-ensemble-refactor)
-- [LLMSE - MB270k - Ensemble- RefactorBull](https://www.kaggle.com/code/illidan7/llmse-mb270k-ensemble-refactorbull)
-- [LLMSE - MB270k - Ensemble](https://www.kaggle.com/code/illidan7/llmse-mb270k-ensemble)
-- [LLMSE - MB270k - EnsembleRetry - r1](https://www.kaggle.com/code/illidan7/llmse-mb270k-ensembleretry-r1)
-- [LLMSE - MB270k - IlliModels - contextlen - main ](https://www.kaggle.com/code/illidan7/llmse-mb270k-illimodels-contextlen-main)
-- [LLMSE - MB270k - IlliModels - FAISS](https://www.kaggle.com/code/illidan7/llmse-mb270k-illimodels-faiss)
-- [LLMSE - MB270k - IlliModels - tfidf mod ](https://www.kaggle.com/code/illidan7/llmse-mb270k-illimodels-tfidf-mod)
 
-*Plus 7 more notebooks — see [full profile](https://www.kaggle.com/illidan7/code)*
 ## Tech Stack
 
 - **Models**: DeBERTa-v3-large, LongFormer-large, AWP-trained DeBERTa, Xwin-LM-70B
