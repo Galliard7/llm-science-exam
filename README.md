@@ -49,17 +49,17 @@ Tested direct inference with Xwin-LM-70B using RAG (layer-by-layer model loading
 
 ```mermaid
 graph LR
-    A[5.7M Wikipedia Articles] --> B[Cohere Embeddings<br>+ KMeans Clustering]
-    B --> C[270k STEM Articles]
-    C --> D[FAISS Similarity Search]
-    D --> E[TF-IDF Re-ranking]
-    E --> F1[DeBERTa-v3-large]
-    E --> F2[LongFormer-large<br>4096 tokens]
-    E --> F3[AWP DeBERTa]
-    F1 --> G[Softmax Fusion<br>scipy + Hill Climb]
+    A["5.7M Wikipedia Articles"] --> B["Cohere Embeddings + KMeans Clustering"]
+    B --> C["270k STEM Articles"]
+    C --> D["FAISS Similarity Search"]
+    D --> E["TF-IDF Re-ranking"]
+    E --> F1["DeBERTa-v3-large"]
+    E --> F2["LongFormer-large (4096 tokens)"]
+    E --> F3["AWP DeBERTa"]
+    F1 --> G["Softmax Fusion (scipy + Hill Climb)"]
     F2 --> G
     F3 --> G
-    G --> H[MAP@3 Predictions]
+    G --> H["MAP@3 Predictions"]
 ```
 
 ## Repository Structure
