@@ -1,5 +1,7 @@
 # LLM Science Exam — Kaggle Competition
 
+![Competition Header](assets/header.png)
+
 ## Overview
 
 The [Kaggle LLM Science Exam](https://www.kaggle.com/competitions/kaggle-llm-science-exam) competition (2023) required answering science multiple-choice questions (5 options, MAP@3 metric). The key constraint was a 9-hour GPU inference budget with no internet at submission time, making retrieval-augmented inference the dominant paradigm.
@@ -31,6 +33,34 @@ Combined model predictions via softmax probability fusion with learned weights, 
 ### 6. 70B LLM Experiment
 
 Tested direct inference with Xwin-LM-70B using RAG (layer-by-layer model loading), demonstrating the retriever+reader paradigm as an alternative, though classifier ensembles proved more practical within compute constraints.
+
+## Results
+
+| Model | MAP@3 | Notes |
+|---|---|---|
+| DeBERTa-v3-large | — | Shorter context, higher accuracy |
+| LongFormer-large | — | 4096-token context window |
+| AWP-trained DeBERTa | — | Adversarial weight perturbation |
+| Openbook fallback | — | Low-confidence prediction handler |
+| Xwin-LM-70B (RAG) | — | 70B LLM experiment |
+| **Final Ensemble** | — | Softmax fusion + optimized weights |
+
+## Architecture
+
+```mermaid
+graph LR
+    A[5.7M Wikipedia Articles] --> B[Cohere Embeddings<br>+ KMeans Clustering]
+    B --> C[270k STEM Articles]
+    C --> D[FAISS Similarity Search]
+    D --> E[TF-IDF Re-ranking]
+    E --> F1[DeBERTa-v3-large]
+    E --> F2[LongFormer-large<br>4096 tokens]
+    E --> F3[AWP DeBERTa]
+    F1 --> G[Softmax Fusion<br>scipy + Hill Climb]
+    F2 --> G
+    F3 --> G
+    G --> H[MAP@3 Predictions]
+```
 
 ## Repository Structure
 
